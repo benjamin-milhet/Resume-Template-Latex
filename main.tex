@@ -1,0 +1,185 @@
+\PassOptionsToPackage{dvipsnames}{xcolor}
+\documentclass[10pt,a4paper,ragged2e,withhyper]{altacv}
+\geometry{left=1.2cm,right=1.2cm,top=1cm,bottom=1cm,columnsep=0.75cm}
+\usepackage{paracol}
+
+
+\ifxetexorluatex
+  \setmainfont{Roboto Slab}
+  \setsansfont{Lato}
+  \renewcommand{\familydefault}{\sfdefault}
+\else
+  \usepackage[rm]{roboto}
+  \usepackage[defaultsans]{lato}
+  \renewcommand{\familydefault}{\sfdefault}
+\fi
+
+  \definecolor{PrimaryColor}{HTML}{0b486b}
+  \definecolor{SecondaryColor}{HTML}{0b486b}
+  \definecolor{ThirdColor}{HTML}{0b486b}
+  \definecolor{BodyColor}{HTML}{666666}
+  \definecolor{EmphasisColor}{HTML}{2E2E2E}
+  \definecolor{BackgroundColor}{HTML}{ffffff}
+
+
+\colorlet{name}{PrimaryColor}
+\colorlet{tagline}{PrimaryColor}
+\colorlet{heading}{PrimaryColor}
+\colorlet{headingrule}{ThirdColor}
+\colorlet{subheading}{SecondaryColor}
+\colorlet{accent}{SecondaryColor}
+\colorlet{emphasis}{EmphasisColor}
+\colorlet{body}{BodyColor}
+\pagecolor{BackgroundColor}
+
+\renewcommand{\namefont}{\Huge\rmfamily\bfseries}
+\renewcommand{\personalinfofont}{\small\bfseries}
+\renewcommand{\cvsectionfont}{\LARGE\rmfamily\bfseries}
+\renewcommand{\cvsubsectionfont}{\large\bfseries}
+
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+
+\begin{document}
+    \name{Benjamin MILHET}
+    \tagline{Etudiant Ingénieur en Informatique \\
+    Ingéniérie du Logiciel et des Connaissances}
+    %% You can add multiple photos on the left or right
+    \photoL{4cm}{qrcode}
+    
+    \personalinfo{
+        \email{benjamin.milhet@outlook.fr}\smallskip
+        \phone{+33 6 83 70 09 22}
+        \NewInfoField{location}{\faMapMarker}[https://www.google.fr/maps/place/21000+Dijon/@47.3318644,4.9971998,13z/data=!3m1!4b1!4m5!3m4!1s0x47f29d8ceffd9675:0x409ce34b31458d0!8m2!3d47.322047!4d5.04148]
+        \location{Dijon, France}\\
+        \NewInfoField{calendar}{\faCalendar}
+        \calendar{10/19/2000}
+        %\linkedin{Benjamin MILHET}
+        \github{Orchanyne}
+    }
+    
+    \makecvheader
+    
+    %% Set the left/right column width ratio to 6:4.
+    \columnratio{0.25}
+    \begin{paracol}{2}
+    
+         % ----- ABOUT ME -----
+        \cvsection{Profil}
+            \begin{quote}
+                Je suis actuellement en 1ère année du cursus ingénieur en Informatique / Électronique et je suis à la recherche d'un stage d'un mois pour se familiariser avec le monde du travail.
+            \end{quote}
+            
+            \bigskip
+        % ----- ABOUT ME -----
+
+        % ----- SKILLS -----
+        \cvsection{Compétences}
+            \smallskip
+            \cvtag{Java}
+            \cvtag{C++}
+            \cvtag{Python}
+            \cvtag{C}
+            \cvtag{C\#}
+            \cvtag{Javascript}
+            \cvtag{PHP}
+            \cvtag{SQL}
+            \medskip
+            
+            \cvtag{Unity}
+            \cvtag{Symfony}
+            \cvtag{Node.js}
+            \cvtag{Git}
+            \cvtag{Shell}
+            \cvtag{LaTeX}
+            \bigskip
+        % ----- SKILLS -----
+        
+        % ----- LANGUAGES -----
+        \cvsection{Langues}
+        \smallskip
+            \cvlang{Anglais}{Courant / B2}\\
+            \divider
+            \cvlang{Espagnol}{Base / A2}
+        \bigskip
+        \smallskip
+        % ----- LANGUAGES -----
+        
+        % ----- INTERESTS -----
+        \cvsection{Passions}
+        \smallskip
+            \cvevent{}{\cvrepo{ \faCode ~ Raspberry pi}{}}{}{}
+            \divider
+            
+            \cvevent{}{\cvrepo{ \faGamepad ~ Jeux vidéo}{}}{}{}
+            \divider
+            
+            \cvevent{}{\cvrepo{ \faBookOpen ~ Comics}{}}{}{}
+            \divider
+            
+            \cvevent{}{\cvrepo{ \faBicycle ~ VTT}{}}{}{}
+
+        % ----- INTERESTS -----
+        %\begin{figure}[!h]
+        %    \centering
+        %    \includegraphics[width=0.15\textwidth]{qrcode.png}
+        %\end{figure}
+        \newpage
+        \switchcolumn
+        
+        % ----- EXPERIENCE -----
+        \vspace{0.1cm}
+        \cvsection{Experiences}
+            \cvevent{Stagiaire développeur logiciel }{| Maison Blanche Formation}{Avril 2021 -- Juillet 2021}{Besançon, France}
+            \begin{itemize}
+                \item Réalisation d'un test de niveau de langue évaluant les 4 compétences principales avec le framework Symfony
+            \end{itemize}
+            \divider
+            
+            \cvevent{Opérateur d’atelier }{| HAUCK}{Juillet 2019}{Besançon, France}
+            \begin{itemize}
+                \item Aide à la préparation des pièces pour traitement thermique
+            \end{itemize}
+            \divider
+            
+            \cvevent{Opérateur d’atelier }{| PLAST MOULDING}{Juin 2019}{Besançon, France}
+            \begin{itemize}
+                \item Assemblage de sous-ensembles pour l’automobile
+            \end{itemize}
+            \divider
+            
+            \cvevent{Opérateur magasinier }{| DATC Europe}{Juillet 2017}{Besançon, France}
+            \begin{itemize}
+                \item Préparateur de commandes, réception de colis de produits finis
+                \item Montage de composants mécaniques
+            \end{itemize}
+            
+        % ----- EXPERIENCE -----
+        
+        % ----- EDUCATION -----
+        \cvsection{Formation}
+            \cvevent{Ingénieur en Informatique/Électronique }{| Ingéniérie du Logiciel et des Connaissances}{Depuis 2021}{ESIREM, Dijon}
+            \divider
+            
+            \cvevent{DUT Informatique }{}{2019 -- 2021}{IUT de Dijon, Dijon}
+            \divider
+            
+            \cvevent{Anglais intensif }{| Certificat obtenu : Niveau avancée}{2018 -- 2019}{Kaplan Whittier College, Los Angeles}
+            \divider
+            
+            \cvevent{Baccalauréat série S }{| Sciences  de la Vie et  de la Terre, spécialité Informatique et Sciences du Numérique}{2017 -- 2018}{Lycée Louis Pergaud, Besançon}
+            
+        % ----- EDUCATION -----
+        
+        % ----- PROJECTS -----
+        \cvsection{Projets}
+            %\cvevent{Simulation d'un jeu du type "RISK" }{\cvrepo{| \faGithub D-BASTON}{https://github.com/Orchanyne/D-BASTON}}{}{}
+            %Projet réalisé sur un semestre à l’aide du logiciel Unity et du langage C\#. Durant ce projet, mon groupe et moi avons travaillé sur la réalisation d’une interface de jeu, un système de lancer de dés ainsi que sur un mode multijoueurs.
+            
+            %\divider
+            
+             \cvevent{Conception et Réalisation d'un "Blind-Test" }{\cvrepo{| \faGithub Blind-Test}{https://github.com/Orchanyne/Blind_test}}{}{}
+            Projet réalisé en binôme en 3 mois en utilisant différents frameworks et bibliothèques du Web comme : Node.js, Socket.io et Ajax. De plus, ce projet intègre la gestion d'une base de données.  Ce dernier projet à l'IUT nécessite d'utiliser les différentes compétences acquises tout au long de ces deux années universitaires. 
+        % ----- PROJECTS -----
+    \end{paracol}
+\end{document}
