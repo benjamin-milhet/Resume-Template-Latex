@@ -1,3 +1,3 @@
 # Resume-Template-Latex
 
-![alt text](https://github.com/Orchanyne/Resume-Template-Latex/blob/master/MILHET-CV-FR.png)
+![alt text](https://github.com/Orchanyne/Resume-Template-Latex/blob/main/MILHET-CV-FR.png)
